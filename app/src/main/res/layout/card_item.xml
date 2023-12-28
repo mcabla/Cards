@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_marginStart="@dimen/card_horizontal_margin"
+    android:layout_marginTop="@dimen/card_vertical_margin"
+    android:layout_marginEnd="@dimen/card_horizontal_margin"
+    android:layout_marginBottom="@dimen/card_vertical_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background">
+
+
+        <ImageView
+            android:id="@+id/backgroundImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/card_vertical_padding"
+            android:layout_marginEnd="@dimen/card_horizontal_padding"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundImageView"
+            app:layout_constraintTop_toTopOf="@+id/backgroundImageView" />
+
+        <TextView
+            android:id="@+id/subtextTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_horizontal_padding"
+            android:layout_marginEnd="@dimen/card_horizontal_padding"
+            android:text="Subtext"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/logoImageView"
+            app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_horizontal_padding"
+            android:layout_marginTop="@dimen/card_vertical_padding"
+            android:layout_marginEnd="@dimen/card_horizontal_padding"
+            android:text="Title"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/logoImageView"
+            app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
+            app:layout_constraintTop_toTopOf="@+id/backgroundImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
